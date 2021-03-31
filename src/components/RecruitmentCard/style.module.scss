@@ -1,3 +1,32 @@
 .card {
-  padding: 10px;
+  margin: 20px;
+  width: 598px;
+  height: 378px;
+  border: 1px solid #F8F8F8;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card_logoImg {
+  border-radius: 4px 4px 0 0;
+}
+
+.card_detailArea {
+  margin: 30px;
+}
+
+.card_recruitmentTitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card_avatorArea img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.card_avatorArea span {
+  color: #AFAFAF;
+  vertical-align: middle;
 }
