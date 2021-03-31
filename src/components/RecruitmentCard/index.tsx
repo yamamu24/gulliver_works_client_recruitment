@@ -12,7 +12,7 @@ const RecruitmentCard = () => {
         <div className={styles.card_recruitmentTitle}>3度の飯よりReact！フロントエンドのエキスパートになりたいエンジニア募集！</div>
 
         <div className={styles.card_avatorArea}>
-          <img src={avator} alt="企業アイコン" />
+          <img src={avator} alt="アイコン" />
           <span>株式会社</span>
         </div>
       </div>
