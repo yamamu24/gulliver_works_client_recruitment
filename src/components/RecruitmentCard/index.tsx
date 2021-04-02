@@ -1,11 +1,15 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./style.module.scss";
 
-import avator01 from "../../images/avator01.png";
+import Avator from "../Avator";
 
-const RecruitmentCard = (props: { logoFileName: string | undefined, avatorFileName: string | undefined }) => {
-  var logoSrc = './images/' + props.logoFileName;
-  var avatorSrc = './images/' + props.avatorFileName;
+type props = {
+  logoFileName: string;
+  avatorFileName: string;
+};
+
+const RecruitmentCard: FC<props> = ({ logoFileName, avatorFileName }) => {
+  var logoSrc = './images/' + logoFileName;
 
   return (
     <div className={styles.card}>
@@ -15,7 +19,7 @@ const RecruitmentCard = (props: { logoFileName: string | undefined, avatorFileNa
         <div className={styles.card_detail_text}>3度の飯よりReact！フロントエンドのエキスパートになりたいエンジニア募集！</div>
 
         <div className={styles.card_detail_avators}>
-          <img src={avatorSrc} />
+          <Avator avatorFileName={avatorFileName} size={"medium"}></Avator>
           <span>株式会社</span>
         </div>
       </div>
