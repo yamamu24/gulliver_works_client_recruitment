@@ -5,8 +5,10 @@ import RecruitmentIndexPage from "./scenes/recruitment/RecruitmentIndexPage";
 import SignInPage from "./scenes/signIn";
 import RecruitmentCard from "./components/RecruitmentCard";
 
-const logo01 = "logo01.png";
-const avator01 = "avator01.png";
+const logo01 = "./images/logo01.png";
+const avator01 = "./images/avator01.png";
+const title01 = "3度の飯よりReact！フロントエンドのエキスパートになりたいエンジニア募集！";
+const companyName01 = "株式会社";
 
 const App: FC = () => (
   <BrowserRouter>
@@ -15,7 +17,7 @@ const App: FC = () => (
       <Route path="/sign_in" component={SignInPage} />
     </div>
 
-    <RecruitmentCard logoFileName={logo01} avatorFileName={avator01}></RecruitmentCard>
+    <RecruitmentCard logoSrc={logo01} title={title01} avatorSrc={avator01} companyName={companyName01}></RecruitmentCard>
   </BrowserRouter>
 );
 

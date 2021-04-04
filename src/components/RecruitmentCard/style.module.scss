@@ -1,13 +1,18 @@
 .card {
-  margin: 20px;
-  width: 598px;
-  height: 378px;
+  margin: 20px auto; 
+  width: calc(100% - 10px);
+  max-width: 598px;
   border: 1px solid #AFAFAF;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.cardImg {
+  width: 100%;
 }
 
 .card_detail {
-  margin: 21px 32px;
+  padding: 3% 5%;
 }
 
 .card_detail_text {
@@ -15,6 +20,9 @@
   font-size: 20px;
   line-height: 29px;
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card_detail_avators img {

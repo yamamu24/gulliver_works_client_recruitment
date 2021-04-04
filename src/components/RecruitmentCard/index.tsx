@@ -4,23 +4,23 @@ import styles from "./style.module.scss";
 import Avator from "../Avator";
 
 type props = {
-  logoFileName: string;
-  avatorFileName: string;
+  logoSrc: string;
+  title: string;
+  avatorSrc: string;
+  companyName: string
 };
 
-const RecruitmentCard: FC<props> = ({ logoFileName, avatorFileName }) => {
-  var logoSrc = './images/' + logoFileName;
-
+const RecruitmentCard: FC<props> = ({ logoSrc, title, avatorSrc, companyName }) => {
   return (
     <div className={styles.card}>
-      <img src={logoSrc} />
+      <img className={styles.cardImg} src={logoSrc} alt="企業イメージ" />
 
       <div className={styles.card_detail}>
-        <div className={styles.card_detail_text}>3度の飯よりReact！フロントエンドのエキスパートになりたいエンジニア募集！</div>
+        <div className={styles.card_detail_text} title={title}>{title}</div>
 
         <div className={styles.card_detail_avators}>
-          <Avator avatorFileName={avatorFileName} size={"medium"}></Avator>
-          <span>株式会社</span>
+          <Avator avatorSrc={avatorSrc} size={"medium"}></Avator>
+          <span>{companyName}</span>
         </div>
       </div>
     </div>
