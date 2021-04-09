@@ -8,7 +8,7 @@ type props = {
 
 const Avator: FC<props> = ({ avatorSrc, size }) => {
     return (
-        <img src={avatorSrc} className={styles.avatorImg} data-size={size} alt="企業アイコン" />
+        <img src={avatorSrc} className={styles.avatorImg} data-size={size} alt="企業アイコン画像" />
     );
 }
 

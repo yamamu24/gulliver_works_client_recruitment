@@ -13,7 +13,7 @@ type props = {
 const RecruitmentCard: FC<props> = ({ logoSrc, title, avatorSrc, companyName }) => {
   return (
     <div className={styles.card}>
-      <img className={styles.cardImg} src={logoSrc} alt="企業イメージ" />
+      <img className={styles.cardImg} src={logoSrc} alt="企業イメージ画像" />
 
       <div className={styles.card_detail}>
         <div className={styles.card_detail_text} title={title}>{title}</div>
