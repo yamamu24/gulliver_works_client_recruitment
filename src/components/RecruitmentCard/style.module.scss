@@ -1,3 +1,38 @@
 .card {
-  padding: 10px;
+  margin: 20px auto; 
+  width: calc(100% - 10px);
+  max-width: 598px;
+  border: 1px solid #AFAFAF;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.cardImg {
+  width: 100%;
+}
+
+.card_detail {
+  padding: 3% 5%;
+}
+
+.card_detail_text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card_detail_avators img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.card_detail_avators span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #AFAFAF;
+  vertical-align: middle;
 }
