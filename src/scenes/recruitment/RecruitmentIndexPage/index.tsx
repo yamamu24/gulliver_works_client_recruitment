@@ -1,16 +1,9 @@
 import React from "react";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import RecruitmentCard from "../../../components/RecruitmentCard";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./slider.scss";
+import Carousel from "../../../assets/Carousel";
 import styles from "./style.module.scss";
-
-const logo01 = "./images/logo01.png";
-const avator01 = "./images/avator01.png";
-const title01 = "3度の飯よりReact！フロントエンドのエキスパートになりたいエンジニア募集！";
-const companyName01 = "株式会社";
+import DummyData from "../../../DummyData.json";
 
 const sliderSettings = {
   dots: true,
@@ -24,12 +17,9 @@ const sliderSettings = {
 };
 
 const RecruitmentIndexPage = () => {
-  const items = [];
-  for (let i = 0; i < 10; i++) {
-    items.push(
-      <RecruitmentCard key={"card" + i} logoSrc={logo01} title={title01} avatorSrc={avator01} companyName={companyName01}></RecruitmentCard>
-    )
-  }
+  const items = DummyData.map((item) => (
+    <RecruitmentCard key={item.id} logoSrc={item.LogoSrcURL} title={item.RecruitmentTitle} avatorSrc={item.AvatorSrcURL} companyName={item.CompanyName}></RecruitmentCard>
+  ));
 
   return (
     <div className={styles.text}>
@@ -41,9 +31,7 @@ const RecruitmentIndexPage = () => {
             <div>おすすめの募集</div>
           </div>
 
-          <Slider {...sliderSettings} className={styles.sliderArea}>
-            {items}
-          </Slider>
+          <Carousel children={items}></Carousel>
         </div>
 
         <div>
