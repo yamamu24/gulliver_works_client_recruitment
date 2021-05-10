@@ -5,17 +5,6 @@ import Carousel from "../../../assets/Carousel";
 import styles from "./style.module.scss";
 import DummyData from "../../../DummyData.json";
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  centerMode: true,
-  centerPadding: '15%',
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true
-};
-
 const RecruitmentIndexPage = () => {
   const items = DummyData.map((item) => (
     <RecruitmentCard key={item.id} logoSrc={item.LogoSrcURL} title={item.RecruitmentTitle} avatorSrc={item.AvatorSrcURL} companyName={item.CompanyName}></RecruitmentCard>
