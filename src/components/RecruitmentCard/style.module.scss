@@ -1,5 +1,5 @@
 .card {
-  margin: 20px auto; 
+  margin: 0 auto 30px; 
   width: calc(100% - 10px);
   max-width: 598px;
   border: 1px solid #AFAFAF;
@@ -13,6 +13,7 @@
 
 .card_detail {
   padding: 3% 5%;
+  text-align: left;
 }
 
 .card_detail_text {
@@ -25,7 +26,8 @@
   text-overflow: ellipsis;
 }
 
-.card_detail_avators img {
+.card_detail .card_detail_avators img {
+  display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
 }
