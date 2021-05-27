@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import RecruitmentCard from "../../../components/RecruitmentCard";
 import Carousel from "../../../assets/Carousel";
 import styles from "./style.module.scss";
-import DummyData from "../../../DummyData.json";
+import { useRecruitmentIndexPage } from "./presenter";
 
 const RecruitmentIndexPage = () => {
-  const items = DummyData.map((item) => (
-    <RecruitmentCard key={item.id} logoSrc={item.LogoSrcURL} title={item.RecruitmentTitle} avatorSrc={item.AvatorSrcURL} companyName={item.CompanyName}></RecruitmentCard>
-  ));
+  const { recommendedRecruitmentItems, allRecruitmentItems } = useRecruitmentIndexPage();
 
   return (
     <div className={styles.text}>
@@ -20,7 +17,7 @@ const RecruitmentIndexPage = () => {
             <div>おすすめの募集</div>
           </div>
 
-          <Carousel children={items}></Carousel>
+          <Carousel children={recommendedRecruitmentItems}></Carousel>
         </div>
 
         <div>
@@ -29,7 +26,7 @@ const RecruitmentIndexPage = () => {
           </div>
 
           <div>
-            {items}
+            {allRecruitmentItems}
           </div>
         </div>
       </div>
